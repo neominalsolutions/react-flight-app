@@ -1,4 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+// Alt+Shift+O tuş kombinasyonu
+// refransı olmayan kayıtları temziler
+// CTRl + K + U comment geri al
+// CTRL + K + C Comment
+// Solution Penceresi CTRl + B
+// Terminal CTRL + J
+// Format SHIFT + ALT + F
 
 type StateSampleProps = {
 	value?: number;
