@@ -4,6 +4,7 @@ import './App.css';
 import { Outlet, useRoutes } from 'react-router-dom';
 import AlertSamplePage from './pages/AlertSamplePage';
 import UseStateSamplePage from './pages/UseStateSamplePage';
+import StateSamplePage from './pages/StateSamplePage';
 
 function App() {
 	// yönlendirme dosyamız.
@@ -21,7 +22,7 @@ function App() {
 		},
 		{
 			path: '/state',
-			Component: null,
+			Component: StateSamplePage,
 		},
 	]);
 
