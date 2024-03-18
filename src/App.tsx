@@ -1,26 +1,40 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Outlet, useRoutes } from 'react-router-dom';
+import AlertSamplePage from './pages/AlertSamplePage';
+import UseStateSamplePage from './pages/UseStateSamplePage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// yönlendirme dosyamız.
+	// uygulama ayağa kalkarken useRoute için tanımlanmış olan yönlendirmeleri okur ve ona göre sayfaları yönlendirir.
+	// Hooklar Component içerisindeki özel fonkisyonlar, component ektra özellik kazandırır. App componenti route yönlendirme componenti haline geldi.
+
+	const routes = useRoutes([
+		{
+			path: '/alert',
+			Component: AlertSamplePage, // Page Component
+		},
+		{
+			path: '/useState',
+			Component: UseStateSamplePage, // Page Component
+		},
+		{
+			path: '/state',
+			Component: null,
+		},
+	]);
+
+	return (
+		<>
+			{/* Yönlendirilecek componentler için bir işaretleme sağlar. */}
+			<div style={{ padding: '1rem', margin: '1rem' }}>
+				<Outlet />
+			</div>
+
+			{routes}
+		</>
+	);
 }
 
 export default App;
