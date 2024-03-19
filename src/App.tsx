@@ -5,6 +5,7 @@ import { Outlet, useRoutes } from 'react-router-dom';
 import AlertSamplePage from './pages/AlertSamplePage';
 import UseStateSamplePage from './pages/UseStateSamplePage';
 import StateSamplePage from './pages/StateSamplePage';
+import StateSampleRefPage from './pages/StateSampleRefPage';
 
 function App() {
 	// yönlendirme dosyamız.
@@ -23,6 +24,10 @@ function App() {
 		{
 			path: '/state',
 			Component: StateSamplePage,
+		},
+		{
+			path: '/stateRef',
+			Component: StateSampleRefPage,
 		},
 	]);
 
