@@ -6,6 +6,7 @@ import AlertSamplePage from './pages/AlertSamplePage';
 import UseStateSamplePage from './pages/UseStateSamplePage';
 import StateSamplePage from './pages/StateSamplePage';
 import StateSampleRefPage from './pages/StateSampleRefPage';
+import UseEffectPage from './pages/UseEffectPage';
 
 function App() {
 	// yönlendirme dosyamız.
@@ -28,6 +29,10 @@ function App() {
 		{
 			path: '/stateRef',
 			Component: StateSampleRefPage,
+		},
+		{
+			path: 'useEffect',
+			Component: UseEffectPage,
 		},
 	]);
 

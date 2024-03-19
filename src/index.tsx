@@ -16,12 +16,10 @@ const root = ReactDOM.createRoot(
 // Index.tsx dosyası ise uygulamanın index.html ilk tanıtımını yapıldığı yerdir.
 
 root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<App />
-			{/* uygulamaın react üzerindne çalıştığı ana dizin app dosyasıdır. */}
-		</BrowserRouter>
-	</React.StrictMode>
+	<BrowserRouter>
+		<App />
+		{/* uygulamaın react üzerindne çalıştığı ana dizin app dosyasıdır. */}
+	</BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
