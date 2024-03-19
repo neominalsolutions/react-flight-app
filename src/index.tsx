@@ -6,6 +6,7 @@ import App from './App';
 import UseStateSample from './components/UseStateSample';
 import Alert from './components/Alert';
 import { BrowserRouter } from 'react-router-dom';
+import IbanContextProvider from './pages/contextApi/context/IBanCopyContext';
 
 // import UseStateSample from './components/UseStateSample';
 
@@ -17,8 +18,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<BrowserRouter>
-		<App />
-		{/* uygulamaın react üzerindne çalıştığı ana dizin app dosyasıdır. */}
+		<IbanContextProvider>
+			<App />
+			{/* uygulamaın react üzerindne çalıştığı ana dizin app dosyasıdır. */}
+		</IbanContextProvider>
 	</BrowserRouter>
 );
 
